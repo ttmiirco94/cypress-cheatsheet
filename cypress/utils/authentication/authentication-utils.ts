@@ -12,12 +12,14 @@ export abstract class AuthenticationUtils {
                 password = userCredentials.password;
             })
             .then(() => {
+                cy.get(AuthenticationConstants.Selectors.Login.BUTTON_LOGIN).click();
+                cy.wait(1000);
                 cy.get(AuthenticationConstants.Selectors.Login.USERNAME).type(username);
                 cy.get(AuthenticationConstants.Selectors.Login.PASSWORD).type(password);
-                cy.get(AuthenticationConstants.Selectors.Login.BUTTON_LOGIN).click();
+                cy.get(AuthenticationConstants.Selectors.Login.BUTTON_SEND_LOGIN).click();
                 cy.wait(1000);
             })
 
-        cy.get(AuthenticationConstants.Selectors.Login.BUTTON_LOGIN).should('not.exist');
+        cy.get(AuthenticationConstants.Selectors.Login.BUTTON_LOGIN).should('not.be.visible');
     }
 }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "typescript": "*",
-    "cypress": "*"
+    "cypress": "*",
+    "@faker-js/faker": "^8.2.0"
   }
 }

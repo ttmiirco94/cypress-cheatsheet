@@ -1,6 +1,14 @@
 {
   "name": "cypress-cheatsheet",
   "version": "1.0.0",
+  "scripts": {
+    "start": "npx cypress open",
+    "cypress": "npx cypress open",
+    "cypress:test": "npx cypress open",
+    "cypress:stage": "npx cypress open",
+    "cypress:headless": "npx cypress run",
+    "cypress:headless:testfile": "npx cypress run --spec \"cypress/e2e/1-cypress-examples/1-getting-started/todo.cy.ts\""
+  },
   "devDependencies": {
     "typescript": "*",
     "cypress": "*",
